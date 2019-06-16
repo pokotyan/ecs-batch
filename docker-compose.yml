@@ -1,0 +1,12 @@
+version: '2'
+services:
+  app:
+    image: pokotyan/ecs-batch:latest
+    working_dir: '/var/work'
+    ports:
+      - 80:8000
+    environment:
+      - PORT=8000
+    env_file: .env
+    command:
+      sh -c 'npm run start:container'

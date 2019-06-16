@@ -1,0 +1,27 @@
+{
+  "extends": ["eslint:recommended", "plugin:prettier/recommended", "plugin:@typescript-eslint/recommended"],
+  "plugins": ["@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "globals": {
+    "describe": true,
+    "it": true,
+    "require": true,
+    "module": true,
+    "process": true,
+    "exports": true
+  },
+  "rules": {
+    "no-unused-vars": "off",
+    "no-console": "off",
+    "@typescript-eslint/indent": ["error", 2]
+  }
+}
